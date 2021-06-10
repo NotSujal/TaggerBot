@@ -1,3 +1,4 @@
 discord
 flask
+pretty_help
 google
