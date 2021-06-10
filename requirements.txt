@@ -1,4 +1,4 @@
 discord
 flask
-pretty_help
+discord-pretty-help
 google
