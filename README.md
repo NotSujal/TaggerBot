@@ -25,6 +25,7 @@ Note: if the tag is unverified then `  ⛔(unverified)` is added to the tag.
 command: `<verify [tag]`
 
 Only the *TagManagers* can verify the tags to keep the tags SFW.
+
 After verification the tags are then moved to `verified_tags` and  `⚡(is verified) ` is added to the tag.
 
 ### searching for a Tag
