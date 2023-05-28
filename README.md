@@ -1,61 +1,45 @@
-# Tagger version 1.0
+# Tagger v1.0
 
-Tagger is made by @NotSujal
+## Overview
 
-## What is Tagger?
+Tagger is a professional and versatile tagbot designed to efficiently store various types of data. It offers customizable tags within the Discord platform, allowing users to easily manage and access information.
 
-Tagger is a specialised tagbot to store all type of data. Tags are easily customisable within the discord.
+## Key Features
 
+### Adding Tags
+Command: `<add [tag] [answer]`
 
+Both normal users and designated Tag Managers have the ability to add and edit tags. When a tag is added, it is initially stored in the `unverified_tags` list until it undergoes verification. Unverified tags are marked with the symbol ⛔ to indicate their status.
 
-## Why Tagger and How Tagger Works?
+### Tag Verification
+Command: `<verify [tag]`
 
-### Adding a tag
-command: `<add [tag] [answer]`
+Only Tag Managers have the authority to verify tags, ensuring that all tags remain safe for work (SFW). Once verified, tags are moved to the `verified_tags` list and labeled with the symbol ⚡ to indicate their verified status.
 
-Every User (in discord) is able to **add tags** and **edit tags**.
-The users are classified as ***Tagmanagers*** and ***Normal Users***.
+### Tag Search
+Command: `<tag [query]`
 
-Both users and Tagmanagers are able to add tags.
-The tags are then stored in the `unverified_tags` list untill they are verified. 
+When this command is executed, Tagger searches for the requested tag within the `verified_tags` list and retrieves the stored information. If the tag is not found in the verified tags, Tagger then searches the `unverified_tags` list. If the tag is still not found, Tagger performs a search on Google and returns the topmost result (link) to the user.
 
-Note: if the tag is unverified then `  ⛔(unverified)` is added to the tag.
+### Tag Requests
+Command: `<requestedtags`
 
-### Verification of tags
-command: `<verify [tag]`
+If Tagger is unable to locate a requested tag within the saved data, it adds the tag as a request in the `requested_tags` list. All requested tags can be viewed using this command. Tag Managers have the ability to fulfill these requests by providing the relevant data and removing the request from the list.
 
-Only the *TagManagers* can verify the tags to keep the tags SFW.
+### Removal of Satisfied Tags
+Command: `<delrequests [request]`
 
-After verification the tags are then moved to `verified_tags` and  `⚡(is verified) ` is added to the tag.
+Tag Managers can delete requests from the `requested_tags` list if the requested tag is either not safe for work (NSFW) or has already been satisfied.
 
-### searching for a Tag
-command: `<tag [query]`
+### Tag Editing
+Command (for unverified tags): `<editunverified [query] [edited_answer]`
+Command (for verified tags): `<editunverified [query] [edited_answer]`
 
-Once the command is deployed, tagger finds the tag in the *verified_tags* and sends the stored output.
-If it doesn't finds the tag , it will go through the *unverified_tags* and find the tag.
-If it doesn't find the mentioned tag in any of these lists it will search it on google and send the top most output(link) to the user.
+Users can edit tags using these commands, both for unverified and verified tags.
 
-### requesting for a tag
-command: ` <requestedtags`
+### Additional Tag Managers
+Command: `<addtagmanager`
 
-If tagger doesn't finds the tag in the saved data.
-It will add the tag as a request in `requested_tags`.
-All the requested Tags are visible with the help of the command.
-A TagManager can satisfy the tag(enter the data) and remove the request from the list.
+Tag Managers have the authority to add new Tag Managers using this command. Only trusted members should be added, as any misconduct may lead to serious consequences. It is important for Tag Managers to maintain a professional behavior to retain their role.
 
-### remove the satisfied tags
-command:`<delrequests [request]`
-
-If the requested tag is NSFW/already satisfied a Tagmanager can delete the request.
-
-### edit tags 
-command:(for unverified) `<editunverified [query] [edited_answer]`
-command: (for  verified)`<editunverified [query] [edited_answer]`
-
-### more tagmanagers
-command: `<addtagmanager`
-
-Using this command you can add new tagmanagers.
-only Tagmanagers can summon/recruit new tagmanagers
-*ONLY ADD TRUSTED MEMBERS, ANY MISBEHAVE MAY LEAD TO SERIOUS TROUBLE*
-**DONOT BEHAVE RUBBISH AS A TAGMNAGER, YOU MIGHT LOOSE THE TAGMANANAGER ROLE**
+Thank you for using Tagger! If you have any questions or require assistance, please contact at sjlchoudhari@gmail.com.
